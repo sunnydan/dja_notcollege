@@ -1,0 +1,49 @@
+{% extends "base.html" %} 
+
+{% block title %}About{% endblock %}
+
+{% block nav %}
+<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/books/">Books</a></li>
+<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+<li class="nav-item active"><a class="nav-link" href="/about/">About</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">About Not College</h1>
+    <p class="lead">
+        This a combination super-assignment that I decided to do because I had several django assignments to do that all involved
+        similar concepts, including user accounts, passwords, validation, databases interactions, and other things, so I
+        decided to combine them all into one assignment. </p>
+    <hr class="my-4">
+    <p>
+        My criteria for this project include:
+    </p>
+    <ul>
+        <li>Build a SQLlite database interfaced with Python by Django's API which follows the database diagram found in the project
+            folder
+        </li>
+        <li>Users' password are stored, encrypted, and validated using Bcrypt</li>
+        <li>Users can log in to the site with either their username or their email</li>
+        <li>Users and Friends of Users get notified when it is that User's birthday</li>
+        <li>Users can talk to their Friends in Chatrooms</li>
+        <li>Users can make Posts and comments on their, and their friends' User pages</li>
+        <li>Authors(users) can upload listings of books with themselves or other users as authors</li>
+        <li>Users can "like" books they like</li>
+        <li>Users can make Posts and comments on the pages of books</li>
+        <li>Users can write Reviews and give ratings of 0 to 5 stars to books</li>
+        <li>Teachers(users) can run courses for Students (other users)</li>
+        <li>Teachers can mark Books as required for the course</li>
+        <li>Students can join courses run by Teachers</li>
+        <li>Students can make Posts and comments on the pages of courses</li>
+        <li>When Teachers make Posts or comments on the pages of their courses, their Posts/comments are highlighted</li>
+        <li>Users can write Reviews and give ratings to courses</li>
+        <li>Users can reply to Reviews with Posts</li>
+        <li>Information about Books, Courses, Reviews, and Posts can only be delete/edited by their Authors/Teachers</li>
+        <li>Admins can edit/delete any information</li>
+        <li>Users can only be made Admins by other Admins</li>
+        <li>The first registered user is automatically an Admin</li>
+    </ul>
+</div>
+{% endblock %}
