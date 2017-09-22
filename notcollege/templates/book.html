@@ -1,0 +1,25 @@
+{% extends "page.html" %} 
+
+{% block title %}BookName{% endblock %} 
+
+{% block nav %}
+<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item active"><a class="nav-link" href="/books/">Books</a></li>
+<li class="nav-item"><a class="nav-link" href="/courses/">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+{% endblock %}
+
+{% block name %}"The Placeholder Team"{% endblock %}
+
+{% block details %}
+    <p>By <a href="/profile/placeholder/">User McUser</a></p>
+    <p>
+        <strong>Average Rating: </strong> &#9733; &#9733; &#9733; <br>
+        <strong>Likes:</strong> 8008135 <br>
+        <strong>Uploaded:</strong> 00/00/0000 <br>
+        <strong>Details Updated:</strong> 00/00/0000 <br>
+        <strong>ISBN:</strong> 023475-1398475-1389
+    </p>
+    <p><strong>Description:</strong> Ten years ago a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a problem and no one else can help, and if you can find them, maybe you can hire the A-team.</p>
+    <p><a href="/book/placeholder/reviews/">View Reviews</a></p>
+{% endblock %}

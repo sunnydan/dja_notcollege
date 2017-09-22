@@ -11,7 +11,8 @@
         <h1 class="well">Login</h1>
         <div class="col-lg-12 well">
             <div class="row">
-                <form action="/processlogin" method="POST">
+                <form action="/processlogin/" method="POST">
+                    {% csrf_token %}
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Username or Email</label>
@@ -23,7 +24,7 @@
                         </div>
                         <div class="row" style="padding-top: 15px;">
                             <div class="col-sm-3">
-                                <button type="button" class="btn btn-lg btn-info">Login</button>
+                                <input type="submit" class="btn btn-lg btn-info" value="Login">
                             </div>
                             <div class="col-sm-9">
                                 <a href="/register/">Don't have an account? Register.</a>

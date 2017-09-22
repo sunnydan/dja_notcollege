@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<div class="jumbotron">
+    <h1>{% block name %}{% endblock %}</h1>
+    {% block details %}
+    {% endblock %}
+</div>
+<h3>Comments:</h3>
+{% for post in posts %} 
+{% include "post.html" %} 
+{% endfor %}
+<button class="btn-sm" style="margin-top: 15px;">Post</button> 
+{% endblock %}

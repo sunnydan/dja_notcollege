@@ -1,7 +1,10 @@
 <div class="container rounded border">
-    <p><strong>{{ post.author }}</strong> at {{ post.created_at }}</p>
-    <p>{{ post.text }}</p>
-    {% if post.updated_at %}Edited at: {{ post.updated_at}}{% endif %} 
+    <div style="padding-bottom: 15px;">
+        <p><strong>{{ post.author }}</strong> at {{ post.created_at }}</p>
+        <p>{{ post.text }}</p>
+        <button class="btn-sm">Reply</button>
+        {% if post.updated_at %}Edited at: {{ post.updated_at}}{% endif %}
+    </div>
     {% for post in post.posts %}
     {% include "post.html" %}
     {% endfor %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+
+{% block title %}Courses{% endblock %} 
+
+{% block nav %}
+<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/books/">Books</a></li>
+<li class="nav-item active"><a class="nav-link" href="/courses/">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <form action="/search/courses/">
+        <div class="row">
+            <input class="form-control col-sm-11" type="search" placeholder="Find the courses you're looking for"><input type="submit" value="Search" class="btn-sm col-sm-1">
+        </div>
+        <div class="form-group">
+                <p></p>
+            </div>
+    </form>
+</div>
+{% for book in books %}
+<div class="container rounded border">
+    <p>
+        <a href="/book/placeholder/"><strong>{{ book.title }}</strong></a> by <a href="/profile/placeholder/"><strong>Joe Schmoe</strong></a><br>
+        <strong>Likes:</strong> 200 <strong>Average Rating:</strong>  &#9733; &#9733; &#9733; 
+    </p>
+</div>
+{% endfor %}
+{% endblock %}
